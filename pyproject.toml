@@ -1,0 +1,10 @@
+[project]
+name = "krakenFilePaser"
+version = "0.0.1"
+dependencies = [ 
+    "pandas"
+]
+
+[tool.setuptools.packages.find]
+where = ["file_parser"]
+exclude = ["file_parser.data"]
