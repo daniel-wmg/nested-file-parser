@@ -1,0 +1,16 @@
+from pathlib import Path
+
+class FileParser():
+
+    def __init__(self, input_dir, out_file, value_col, spp_col, species, glob_text) -> None:
+        
+        self.value_col = value_col
+        self.species_col = spp_col
+        self.wanted_species = [spp.strip() for spp in species(",")]
+        self.out_path = out_file
+        self.input_dir = Path(input_dir)
+
+    def get_uuid(self, filename):
+        return filename.split("_")[0] 
+
+    
